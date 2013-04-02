@@ -10,6 +10,7 @@
 		497CF453170A8E0B00E5A811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE6AD5B1357F100007D6B75 /* Foundation.framework */; };
 		497CF458170A8E0B00E5A811 /* CoolButtonsFramework.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 497CF457170A8E0B00E5A811 /* CoolButtonsFramework.h */; };
 		497CF45A170A8E0B00E5A811 /* CoolButtonsFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 497CF459170A8E0B00E5A811 /* CoolButtonsFramework.m */; };
+		497CF46A170A90C800E5A811 /* CoolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6AD771357F2EA007D6B75 /* CoolButton.m */; };
 		7D19EC9213ABF26600C4091D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D19EC9113ABF26600C4091D /* background.png */; };
 		7D19EC9413ABF49E00C4091D /* CoolButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D19EC9313ABF49E00C4091D /* CoolButtons.xib */; };
 		7D19EC9713ABF6B300C4091D /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D19EC9513ABF6B300C4091D /* header.png */; };
@@ -81,9 +82,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		497CF445170A8C9400E5A811 /* CoolButtonsFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoolButtonsFramework-Prefix.pch"; sourceTree = "<group>"; };
-		497CF446170A8C9400E5A811 /* CoolButtonsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolButtonsFramework.h; sourceTree = "<group>"; };
-		497CF448170A8C9400E5A811 /* CoolButtonsFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolButtonsFramework.m; sourceTree = "<group>"; };
 		497CF452170A8E0B00E5A811 /* libCoolButtonsFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoolButtonsFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		497CF456170A8E0B00E5A811 /* CoolButtonsFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoolButtonsFramework-Prefix.pch"; sourceTree = "<group>"; };
 		497CF457170A8E0B00E5A811 /* CoolButtonsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolButtonsFramework.h; sourceTree = "<group>"; };
@@ -177,24 +175,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		497CF443170A8C9400E5A811 /* CoolButtonsFramework */ = {
-			isa = PBXGroup;
-			children = (
-				497CF446170A8C9400E5A811 /* CoolButtonsFramework.h */,
-				497CF448170A8C9400E5A811 /* CoolButtonsFramework.m */,
-				497CF444170A8C9400E5A811 /* Supporting Files */,
-			);
-			path = CoolButtonsFramework;
-			sourceTree = "<group>";
-		};
-		497CF444170A8C9400E5A811 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				497CF445170A8C9400E5A811 /* CoolButtonsFramework-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		497CF454170A8E0B00E5A811 /* CoolButtonsFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +256,6 @@
 				7DA0513213BAD9EB00D01AE1 /* icon.png */,
 				7DA0513013BAD9DE00D01AE1 /* icon@2x.png */,
 				7DE6AD5F1357F100007D6B75 /* CoolButtons */,
-				497CF443170A8C9400E5A811 /* CoolButtonsFramework */,
 				497CF454170A8E0B00E5A811 /* CoolButtonsFramework */,
 				7DE6AD581357F100007D6B75 /* Frameworks */,
 				7DE6AD561357F100007D6B75 /* Products */,
@@ -459,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				497CF45A170A8E0B00E5A811 /* CoolButtonsFramework.m in Sources */,
+				497CF46A170A90C800E5A811 /* CoolButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +621,7 @@
 				497CF45D170A8E0B00E5A811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE6AD4F1357F100007D6B75 /* Build configuration list for PBXProject "CoolButtons" */ = {
 			isa = XCConfigurationList;
