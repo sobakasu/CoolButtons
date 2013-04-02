@@ -40,18 +40,23 @@
 @synthesize innerView = _innerView;
 @synthesize highlightLayer = _highlightLayer;
 
+#pragma mark -
+
 - (UIColor *)buttonColor
 {
     return _buttonColor;
 }
 
-
 - (void)setButtonColor:(UIColor *)buttonColor
 {
-	_buttonColor = buttonColor;
-    [_innerView setBackgroundColor:[self buttonColor]];
+    if(buttonColor != _buttonColor) {
+        [_buttonColor autorelease];
+        _buttonColor = [buttonColor retain];
+        [_innerView setBackgroundColor:[self buttonColor]];
+    }
 }
 
+#pragma mark -
 
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -74,6 +79,15 @@
     return self;
 }
 
+- (void)dealloc {
+    [_buttonColor release];
+    [_innerView release];
+    [_highlightLayer release];
+    
+    [super dealloc];
+}
+
+#pragma mark -
 
 - (void)_buildView
 {
@@ -113,7 +127,7 @@
 
 
     // create highlight layer
-    _highlightLayer = [CALayer layer];
+    _highlightLayer = [[CALayer layer] retain];
     [_highlightLayer setAnchorPoint:CGPointMake(0, 0)];
     [_highlightLayer setBounds:[self bounds]];
     [_highlightLayer setBackgroundColor:[[UIColor colorWithWhite:0.0 alpha:0.3] CGColor]];

@@ -27,6 +27,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class CALayer;
 @class CAGradientLayer;
@@ -36,8 +37,8 @@
     CAGradientLayer *_innerGlowLayer;
 }
 
-@property (nonatomic, strong) UIColor *buttonColor;
-@property (nonatomic, strong) UIView *innerView;
-@property (nonatomic, strong) CALayer *highlightLayer;
+@property (nonatomic, retain) UIColor *buttonColor;
+@property (nonatomic, retain) UIView *innerView;
+@property (nonatomic, retain) CALayer *highlightLayer;
 
 @end
